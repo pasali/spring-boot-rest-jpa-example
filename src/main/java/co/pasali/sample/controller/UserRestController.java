@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -22,4 +23,8 @@ public class UserRestController {
       return ResponseEntity.ok(userService.getUsers());
    }
 
+   @RequestMapping("/users/{firstName}")
+   public ResponseEntity<List<User>> getAllUser(@PathVariable("firstName") String firstName) {
+      return ResponseEntity.ok(userService.getByFirstName(firstName));
+   }
 }
