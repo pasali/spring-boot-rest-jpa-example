@@ -12,4 +12,6 @@ public interface UserService {
 
    List<User> getByFirstName(String firstName);
 
+   Iterable<User> getByExample(String firstName);
+
 }

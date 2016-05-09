@@ -8,10 +8,10 @@ import org.springframework.data.jpa.domain.Specification;
  */
 public class UserSpecifications {
 
-   public static Specification<User> isEqualToName(final User user) {
+   public static Specification<User> isEqualToName(final String firstName) {
       return (root, query, builder) -> {
          query.orderBy(builder.desc(root.get("userId")));
-         return builder.equal(root.<User> get("firstName"), user.getEmail());
+         return builder.equal(root.<User> get("firstName"), firstName);
       };
    }
 

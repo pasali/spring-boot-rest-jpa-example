@@ -24,8 +24,8 @@ public class UserRestController {
    }
 
    @RequestMapping("/users/{firstName}")
-   public ResponseEntity<List<User>> getAllUser(@PathVariable("firstName") String firstName) {
-      return ResponseEntity.ok(userService.getByFirstName(firstName));
+   public ResponseEntity<Iterable<User>> getAllUser(@PathVariable("firstName") String firstName) {
+      return ResponseEntity.ok(userService.getByExample(firstName));
    }
 
 }
