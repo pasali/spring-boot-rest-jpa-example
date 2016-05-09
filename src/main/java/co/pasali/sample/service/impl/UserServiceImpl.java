@@ -25,12 +25,12 @@ public class UserServiceImpl implements UserService {
    }
 
    @Override
-   public List<User> getByFirstName(String firstName) {
+   public List<User> getByFirstNameUsingSpecifications(String firstName) {
       return userRepository.findAll(UserSpecifications.isEqualToName(firstName));
    }
 
    @Override
-   public Iterable<User> getByExample(String firstName) {
+   public Iterable<User> getByFirstNameUsingQueryByExample(String firstName) {
       User user = new User();
       user.setFirstName(firstName);
 

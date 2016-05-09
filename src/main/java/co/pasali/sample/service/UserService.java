@@ -10,8 +10,8 @@ public interface UserService {
 
    List<User> getUsers();
 
-   List<User> getByFirstName(String firstName);
+   List<User> getByFirstNameUsingSpecifications(String firstName);
 
-   Iterable<User> getByExample(String firstName);
+   Iterable<User> getByFirstNameUsingQueryByExample(String firstName);
 
 }
