@@ -1,4 +1,4 @@
-package co.pasali.sample;
+package co.pasali.sample.entity.specifications;
 
 import co.pasali.sample.entity.User;
 import org.springframework.data.jpa.domain.Specification;

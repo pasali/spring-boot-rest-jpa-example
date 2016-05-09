@@ -27,4 +27,5 @@ public class UserRestController {
    public ResponseEntity<List<User>> getAllUser(@PathVariable("firstName") String firstName) {
       return ResponseEntity.ok(userService.getByFirstName(firstName));
    }
+
 }

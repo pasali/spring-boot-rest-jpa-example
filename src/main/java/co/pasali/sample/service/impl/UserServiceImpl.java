@@ -1,6 +1,6 @@
 package co.pasali.sample.service.impl;
 
-import co.pasali.sample.UserSpecifications;
+import co.pasali.sample.entity.specifications.UserSpecifications;
 import co.pasali.sample.entity.User;
 import co.pasali.sample.repository.UserRepository;
 import co.pasali.sample.service.UserService;
