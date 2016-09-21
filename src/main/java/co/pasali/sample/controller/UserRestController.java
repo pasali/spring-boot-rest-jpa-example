@@ -20,6 +20,7 @@ public class UserRestController {
 
    @RequestMapping("/users")
    public ResponseEntity<List<User>> getAllUser() {
+      String bar = new String("bar");
       return ResponseEntity.ok(userService.getUsers());
    }
 
